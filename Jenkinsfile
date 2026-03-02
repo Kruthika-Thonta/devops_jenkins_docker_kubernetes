@@ -27,7 +27,7 @@ pipeline {
         }
         stage('Set Kube Config') {
             steps {
-                sh 'export KUBECONFIG=.kube/config'
+                sh 'export KUBECONFIG=/var/lib/jenkins/.kube/config'
             }
         }
 
