@@ -16,13 +16,13 @@ pipeline {
 
         stage('Tag Image') {
             steps {
-                sh 'docker tag my-html-app:v1 <dockerhub-username>/my-html-app:v1'
+                sh 'docker tag my-html-app:v1 kruthi2008/my-html-app:v1'
             }
         }
 
         stage('Push to DockerHub') {
             steps {
-                sh 'docker push <dockerhub-username>/my-html-app:v1'
+                sh 'docker push kruthi2008/my-html-app:v1'
             }
         }
 
