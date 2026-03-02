@@ -25,6 +25,11 @@ pipeline {
                 sh 'docker push kruthi2008/my-html-app:v1'
             }
         }
+        stage('Set Kube Config') {
+            steps {
+                sh 'export KUBECONFIG=.kube/config'
+            }
+        }
 
         stage('Deploy to Kubernetes') {
             steps {
